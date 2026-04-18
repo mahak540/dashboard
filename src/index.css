@@ -817,7 +817,7 @@ hr {
   cursor: move;
 }
 
-/* TODO */
+
 .list li::before {
   content: "";
   background: transparent;
@@ -842,9 +842,6 @@ hr {
   background-color: rgb(212, 212, 212);
 }
 
-/* ================= RESPONSIVENESS FIX ================= */
-
-/* Fix main layout */
 @media (max-width: 1024px) {
   .dashboard-container {
     flex-direction: column;
@@ -864,10 +861,8 @@ hr {
   }
 }
 
-/* Mobile view */
 @media (max-width: 768px) {
 
-  /* Topbar fix */
   .topbar-container {
     flex-direction: column;
     height: auto;
@@ -886,23 +881,23 @@ hr {
     justify-content: space-between;
   }
 
-  /* Hide extra menus */
+ 
   .menus {
     display: none;
   }
 
-  /* Watchlist full width */
+ 
   .watchlist-container {
     width: 100%;
     height: 250px;
   }
 
-  /* Content spacing */
+  
   .content {
     padding: 10px;
   }
 
-  /* Row stacking */
+
   .row {
     flex-direction: column;
     align-items: flex-start;
@@ -913,7 +908,7 @@ hr {
     margin-bottom: 20px;
   }
 
-  /* Data section fix */
+
   .data {
     width: 100%;
     flex-direction: column;
@@ -924,7 +919,7 @@ hr {
     display: none;
   }
 
-  /* Table scroll */
+
   .order-table {
     overflow-x: auto;
   }
@@ -933,14 +928,12 @@ hr {
     min-width: 600px;
   }
 
-  /* Watchlist bottom bar fix */
   .watchlist-number {
     width: 100%;
     position: relative;
   }
 }
 
-/* Small phones */
 @media (max-width: 480px) {
 
   .index,
@@ -959,27 +952,22 @@ hr {
   }
 }
 
-/* ===== FIX WATCHLIST ISSUE ===== */
-
 @media (max-width: 768px) {
 
   .dashboard-container {
     flex-direction: column;
   }
 
-  /* Make watchlist full width on top */
   .watchlist-container {
     width: 100% !important;
     height: 250px;
     position: relative;
   }
 
-  /* Remove 32% restriction */
   .watchlist-container {
     flex-basis: 100% !important;
   }
 
-  /* Make main content full width */
   .content {
     flex-basis: 100% !important;
     width: 100%;
@@ -987,3 +975,75 @@ hr {
 
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 260px;
+  height: 100%;
+  background: #fff;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+  z-index: 1200;
+  padding-top: 60px;
+}
+
+.mobile-sidebar.active {
+  left: 0;
+}
+
+.mobile-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-sidebar li {
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.mobile-sidebar li:hover {
+  background: #f5f5f5;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  z-index: 1100;
+}
+
+
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menus {
+    display: none !important;
+  }
+
+  .menu-container {
+    justify-content: flex-start;
+    gap: 15px;
+  }
+
+  .menu-container img {
+    width: 40px;
+  }
+}
