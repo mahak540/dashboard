@@ -842,5 +842,122 @@ hr {
   background-color: rgb(212, 212, 212);
 }
 
+/* ================= RESPONSIVENESS FIX ================= */
+
+/* Fix main layout */
+@media (max-width: 1024px) {
+  .dashboard-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .watchlist-container {
+    width: 100%;
+    height: 300px;
+    order: 2;
+  }
+
+  .content {
+    width: 100%;
+    flex-basis: 100%;
+    order: 1;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+
+  /* Topbar fix */
+  .topbar-container {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .indices-container {
+    width: 100%;
+    border-right: none;
+    justify-content: space-between;
+  }
+
+  .menu-container {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  /* Hide extra menus */
+  .menus {
+    display: none;
+  }
+
+  /* Watchlist full width */
+  .watchlist-container {
+    width: 100%;
+    height: 250px;
+  }
+
+  /* Content spacing */
+  .content {
+    padding: 10px;
+  }
+
+  /* Row stacking */
+  .row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .col {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Data section fix */
+  .data {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .data hr {
+    display: none;
+  }
+
+  /* Table scroll */
+  .order-table {
+    overflow-x: auto;
+  }
+
+  .order-table table {
+    min-width: 600px;
+  }
+
+  /* Watchlist bottom bar fix */
+  .watchlist-number {
+    width: 100%;
+    position: relative;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+  .index,
+  .index-points,
+  .percent {
+    font-size: 0.7rem;
+  }
+
+  .btn {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+}
+
 
 
