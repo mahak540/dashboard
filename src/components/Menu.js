@@ -99,6 +99,9 @@ const Menu = () => {
     <li><Link to="/apps" onClick={() => handleMenuClick(5)}>Apps</Link></li>
   </ul>
 </div>
+  {isMobileMenuOpen && (
+      <div className="overlay" onClick={toggleMenu}></div>
+    )}
     </>
   );
 };
