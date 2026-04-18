@@ -89,16 +89,16 @@ const Menu = () => {
         </div>
       </div>
 
-      <div className={`mobile-sidebar ${isMobileMenuOpen ? "active" : ""}`}>
-        <ul>
-          <li onClick={() => handleMenuClick(0)}>Dashboard</li>
-          <li onClick={() => handleMenuClick(1)}>Orders</li>
-          <li onClick={() => handleMenuClick(2)}>Holdings</li>
-          <li onClick={() => handleMenuClick(3)}>Positions</li>
-          <li onClick={() => handleMenuClick(4)}>Funds</li>
-          <li onClick={() => handleMenuClick(5)}>Apps</li>
-        </ul>
-      </div>
+     <div className={`mobile-sidebar ${isMobileMenuOpen ? "active" : ""}`}>
+  <ul>
+    <li><Link to="/" onClick={() => handleMenuClick(0)}>Dashboard</Link></li>
+    <li><Link to="/orders" onClick={() => handleMenuClick(1)}>Orders</Link></li>
+    <li><Link to="/holdings" onClick={() => handleMenuClick(2)}>Holdings</Link></li>
+    <li><Link to="/positions" onClick={() => handleMenuClick(3)}>Positions</Link></li>
+    <li><Link to="/funds" onClick={() => handleMenuClick(4)}>Funds</Link></li>
+    <li><Link to="/apps" onClick={() => handleMenuClick(5)}>Apps</Link></li>
+  </ul>
+</div>
     </>
   );
 };
