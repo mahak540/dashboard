@@ -959,5 +959,31 @@ hr {
   }
 }
 
+/* ===== FIX WATCHLIST ISSUE ===== */
 
+@media (max-width: 768px) {
+
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  /* Make watchlist full width on top */
+  .watchlist-container {
+    width: 100% !important;
+    height: 250px;
+    position: relative;
+  }
+
+  /* Remove 32% restriction */
+  .watchlist-container {
+    flex-basis: 100% !important;
+  }
+
+  /* Make main content full width */
+  .content {
+    flex-basis: 100% !important;
+    width: 100%;
+  }
+
+}
 
